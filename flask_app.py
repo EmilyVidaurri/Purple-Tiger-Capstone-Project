@@ -17,22 +17,3 @@ def newroute():
     return "Joe Momma"
 
 
-@app.route('/calculator', methods=['GET', 'POST'])
-def calculator():
-    if request.method == 'POST':
-        fav_num = int(request.form['number'])
-        return f'The square of your favorite number is {fav_num ** 2}'
-
-    return """
-    <html>
-    <body>
-      <form method="post">
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text">
-        <label for="number">Favorite number</label>
-        <input id="number" name="number" type="text">
-        <input type="submit" value="Submit">
-      </form>
-    </body>
-    </html>
-    """
