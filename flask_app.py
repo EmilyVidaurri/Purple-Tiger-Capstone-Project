@@ -7,7 +7,7 @@ app.config['DEBUG'] = True
 def main():
     hostname = request.host_url
     message = 'BYEEEEE'
-    return render_template('main.html', host=hostname, msg=message)
+    return render_template('mai.html', host=hostname, msg=message)
 
 @app.route('/about', methods=['GET'])
 def mission():
