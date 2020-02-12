@@ -6,12 +6,12 @@ app.config['DEBUG'] = True
 @app.route('/', methods=['GET'])
 def main():
     hostname = request.host_url
-    message = 'BYEEEEE'
-    return render_template('mai.html', host=hostname, msg=message)
+    message = 'Thank you for visting our site!'
+    return render_template('homepage.html', host=hostname, msg=message)
 
 @app.route('/about', methods=['GET'])
 def mission():
-    return render_template('about.html')
+    return render_template('homepage.html')
 @app.route('/newroute', methods=['GET'])
 def newroute():
     return "Joe Momma"
