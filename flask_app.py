@@ -15,5 +15,7 @@ def mission():
 @app.route('/newroute', methods=['GET'])
 def newroute():
     return "Joe Momma"
-
+@app.route('/ourmission', methods=['GET'])
+def ourmission():
+    return render_template('ourmission.html')
 
