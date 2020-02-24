@@ -1,21 +1,31 @@
-<html>
+<link rel="stylesheet" href="{{ url_for('static', filename='homepage.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='homepage.js') }}">
+        <head>
+        <title>PTCP Website</title>
+    </head>
 <div id="particles-js">
   <div class="container">
     <div class="row top">
       <div class="twelve column">
-        <div class="logo"></div>
-        <h1>Purple Tiger</h1>
-        <h2>Capstone Porject</h2>
+        <div class="logo">PTCP</div>
+        <h1>Purple Tigers</h1>
+        <h2> Capstone Project</h2>
       </div>
     </div>
-        <h1>Welcome to the Purple Tiger's Capstone Project (PTCP)! Click 'Chat' to get started. </h1>
-        <div><a href="{{ host }}about">Chat.</a></div>
-        <p>{% if msg %} {{ msg }} {% endif %}</p>
+
+    <div class="row">
+      <div class="one-half column">
+        <div class="pens pulled">
+          <h1>Thank you for visiting our site! Click 'Chat' to get started.</h1>
+          <ul><li><a target="_blank" rel="noopener noreferrer" href="https://www.pythonanywhere.com/user/alyssadomingue/files/home/alyssadomingue/Purple-Tiger-Capstone-Project/templates/about.html">Chat.</a></li>
+        </div>
+      </div>
 
       <div class="one-half column">
         <div class="posts pulled">
           <h1>Miscallaneous</h1>
-          <ul><li><a href="https://www.j-w-v.com/writing/index.php/20-awe-inspiring-codepen-examples-you-can-learn-from" target="_blank" rel="noopener noreferrer">Our Mission</a></li><li><a href="https://www.j-w-v.com/writing/index.php/hero-images-20-free-places-to-find-them" target="_blank" rel="noopener noreferrer">Gallery (what to put here?)</a></li><li><a href="https://www.j-w-v.com/writing/index.php/18-mobile-first-css-frameworks" target="_blank" rel="noopener noreferrer">Contact Us </a></li>
+          <ul><li><a href="https://www.pythonanywhere.com/user/alyssadomingue/files/home/alyssadomingue/Purple-Tiger-Capstone-Project/templates/ourmission.html" target="_blank" rel="noopener noreferrer">Our Mission<span class="new"></span></a></li><li><a href="https://www.j-w-v.com/writing/index.php/hero-images-20-free-places-to-find-them" target="_blank" rel="noopener noreferrer">Gallery or something </a></li><li><a href="https://www.j-w-v.com/writing/index.php/18-mobile-first-css-frameworks" target="_blank" rel="noopener noreferrer">Contact Us </a></li>
+        </div>
       </div>
     </div>
   </div>
@@ -24,4 +34,4 @@
   <div class="footer">
   <p>Made using the awesome <a href="https://github.com/VincentGarreau/particles.js/">Particles.js</a>, <a href="http://cpv2api.com/">Codepen V2 API</a> & <a href="http://getskeleton.com/">Skeleton.css</a></p> </div></div>
   </div>
-  </html>
+
