@@ -1,5 +1,5 @@
 (function(){
-  
+
   var chat = {
     messageToSend: '',
     messageResponses: [
@@ -29,7 +29,7 @@
       this.scrollToBottom();
       if (this.messageToSend.trim() !== '') {
         var template = Handlebars.compile( $("#message-template").html());
-        var context = { 
+        var context = {
           messageOutput: this.messageToSend,
           time: this.getCurrentTime()
         };
@@ -37,26 +37,26 @@
         this.$chatHistoryList.append(template(context));
         this.scrollToBottom();
         this.$textarea.val('');
-        
+
         // responses
         var templateResponse = Handlebars.compile( $("#message-response-template").html());
-        var contextResponse = { 
+        var contextResponse = {
           response: this.getRandomItem(this.messageResponses),
           time: this.getCurrentTime()
         };
-        
+
         setTimeout(function() {
           this.$chatHistoryList.append(templateResponse(contextResponse));
           this.scrollToBottom();
         }.bind(this), 1500);
-        
+
       }
-      
+
     },
-    
+
     addMessage: function() {
       this.messageToSend = this.$textarea.val()
-      this.render();         
+      this.render();
     },
     addMessageEnter: function(event) {
         // enter was pressed
@@ -74,17 +74,17 @@
     getRandomItem: function(arr) {
       return arr[Math.floor(Math.random()*arr.length)];
     }
-    
+
   };
-  
+
   chat.init();
-  
+
   var searchFilter = {
     options: { valueNames: ['name'] },
     init: function() {
       var userList = new List('people-list', this.options);
       var noItems = $('<li id="no-items-found">No items found</li>');
-      
+
       userList.on('updated', function(list) {
         if (list.matchingItems.length === 0) {
           $(list.list).append(noItems);
@@ -94,7 +94,7 @@
       });
     }
   };
-  
+
   searchFilter.init();
-  
+
 })();
